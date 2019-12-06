@@ -109,8 +109,9 @@ public class VerifyView: UIView {
     /// - Parameters:
     ///   - type: 校验视图类型
     ///   - block: 校验结果回调
-    class public func show(_ type: VerifyType, completeBlock block: ((Bool) -> Void)?) {
+    class public func show(_ type: VerifyType, template image: UIImage? = nil, completeBlock block: ((Bool) -> Void)?) {
         let view = VerifyView(frame: UIScreen.main.bounds, type: type)
+        view.templateImage = image
         view.completeBlock = block
         UIApplication.shared.keyWindow?.addSubview(view)
     }

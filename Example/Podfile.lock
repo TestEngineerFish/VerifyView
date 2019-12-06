@@ -11,7 +11,7 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
-  - VerifyView (0.0.2)
+  - VerifyView (1.0.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   VerifyView:
-    :commit: cb7c772c6cad55ca4040d5620e0f7dcbe9080e64
+    :commit: 8bfe3874678a90d94c85cd038955565a6a014200
     :git: https://github.com/TestEngineerFish/VerifyView.git
 
 SPEC CHECKSUMS:
@@ -41,7 +41,7 @@ SPEC CHECKSUMS:
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  VerifyView: e6062a9ffc65d428d006f8c891f815562103a402
+  VerifyView: 9c91f7a605acb77e703f80adb5641f3de46fdc8f
 
 PODFILE CHECKSUM: aa5fbd8531a56ddd875ca20662ea10b6a0ee098c
 
