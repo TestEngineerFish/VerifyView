@@ -109,14 +109,15 @@ public class VerifyView: UIView {
     /// - Parameters:
     ///   - type: 校验视图类型
     ///   - block: 校验结果回调
-    class public func show(_ type: VerifyType, completeBlock block: ((Bool) -> Void)?) {
-        let view = VerifyView(frame: UIScreen.main.bounds, type: type)
+    class public func show(_ type: VerifyType, template image: UIImage? = nil, completeBlock block: ((Bool) -> Void)?) {
+        let view = VerifyView(frame: UIScreen.main.bounds, template: image, type: type)
         view.completeBlock = block
         UIApplication.shared.keyWindow?.addSubview(view)
     }
 
-    init(frame: CGRect, type: VerifyType) {
+    init(frame: CGRect, template image: UIImage? = nil, type: VerifyType) {
         super.init(frame: frame)
+        templateImage = image
         currentType = type
         _initView()
         setVerifyType(type)

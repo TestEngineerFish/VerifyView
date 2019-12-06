@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   VerifyView:
-    :commit: 8bfe3874678a90d94c85cd038955565a6a014200
+    :commit: a61c9f40ea84884b34afb04dfb2bc87fd5d897c6
     :git: https://github.com/TestEngineerFish/VerifyView.git
 
 SPEC CHECKSUMS:

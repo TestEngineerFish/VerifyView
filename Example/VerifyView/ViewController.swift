@@ -51,8 +51,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func show(_ sender: UIButton) {
+        let image = UIImage(named: "onePerson")
         let type = VerifyType(rawValue: sender.tag) ?? .puzzle
-        VerifyView.show(type) { (isSuccess) in
+        VerifyView.show(type, template: image) { (isSuccess) in
             print(isSuccess)
         }
     }
