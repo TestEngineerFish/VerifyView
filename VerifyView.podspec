@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VerifyView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of VerifyView.'
+  s.version          = '0.0.2'
+  s.summary          = '滑动解锁'
+  s.swift_version    = ['5.0']
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -32,9 +33,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'VerifyView/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'VerifyView' => ['VerifyView/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'VerifyView' => ['VerifyView/Assets/Assets.xcassets']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
