@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VerifyView'
-  s.version          = '0.0.2'
+  s.version          = '1.0.0'
   s.summary          = '滑动解锁'
   s.swift_version    = ['5.0']
 

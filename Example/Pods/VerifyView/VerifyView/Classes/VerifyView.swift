@@ -10,14 +10,14 @@ import UIKit
 
 
 /// 校验模式
-public enum VerifyType: Int {
+enum VerifyType: Int {
     case puzzle     = 0 //"拼图校验"
     case randomChar = 1 //"字符校验(字符随机位置)"
     case trimChar   = 2 //"字符校验(字符固定位置)"
     case slider     = 3 //"滑动校验"
 }
 
-public class VerifyView: UIView {
+class VerifyView: UIView {
 
     // ======== 拼图视图相关 ========
     var imageView       = UIImageView()
@@ -69,7 +69,7 @@ public class VerifyView: UIView {
         view.addSubview(icon)
         view.addSubview(text)
         view.backgroundColor = UIColor.gray.withAlphaComponent(0.25)
-        icon.image = UIImage(named: "send_error", in: self.resourceBundle, compatibleWith: nil)
+        icon.image = UIImage(named: "send_error")
         let attrStr = NSMutableAttributedString(string: "验证失败: 手残了吧,别不承认!再试一下吧~", attributes: [NSAttributedString.Key.foregroundColor:UIColor.black])
         attrStr.addAttributes([NSAttributedString.Key.foregroundColor:UIColor.red], range: NSRange(location: 0, length: 5))
         text.attributedText = attrStr
@@ -80,16 +80,6 @@ public class VerifyView: UIView {
 
     var currentType = VerifyType.puzzle
     var completeBlock: ((Bool)->Void)?
-    var resourceBundle: Bundle? {
-        get {
-            guard let bundlePath = Bundle(for: self.classForCoder).resourcePath else {
-                return Bundle()
-            }
-            let path = bundlePath + "/VerifyView.bundle"
-            return Bundle(path: path)
-        }
-    }
-    var templateImage: UIImage?
 
     let margin       = CGFloat(10) // 默认边距
     /// 背景图宽度
@@ -109,7 +99,7 @@ public class VerifyView: UIView {
     /// - Parameters:
     ///   - type: 校验视图类型
     ///   - block: 校验结果回调
-    class public func show(_ type: VerifyType, completeBlock block: ((Bool) -> Void)?) {
+    class func show(_ type: VerifyType, completeBlock block: ((Bool) -> Void)?) {
         let view = VerifyView(frame: UIScreen.main.bounds, type: type)
         view.completeBlock = block
         UIApplication.shared.keyWindow?.addSubview(view)
@@ -170,7 +160,7 @@ public class VerifyView: UIView {
         shadowView.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(close))
         shadowView.addGestureRecognizer(tap)
-        refreshBtn.setImage(UIImage(named: "refresh", in: self.resourceBundle, compatibleWith: nil), for: .normal)
+        refreshBtn.setImage(UIImage(named: "refresh"), for: .normal)
         refreshBtn.addTarget(self, action: #selector(refresh(_:)), for: .touchUpInside)
 
     }
@@ -236,15 +226,10 @@ public class VerifyView: UIView {
 
     /// 设置拼图验证的内容
     func _setPuzzleContent() {
-        var image: UIImage = {
-            guard let image = self.templateImage else {
-                return UIImage(named: "template", in: self.resourceBundle, compatibleWith: nil)!
-            }
-            return image
-        }()
+        guard var image = UIImage(named: "template") else { return }
         image                            = image.rescaleSize(CGSize(width: imageWidth, height: imageHeight))
         imageView.image                  = image
-        thumbImgView.image               = UIImage(named: "slide_button", in: self.resourceBundle, compatibleWith: nil)
+        thumbImgView.image               = UIImage(named: "slide_button")
         imageView.contentMode            = .scaleAspectFill
         imageView.clipsToBounds          = true
         sliderView.backgroundColor       = sliderBgColor
@@ -276,12 +261,7 @@ public class VerifyView: UIView {
 
     /// 设置字符校验(随机位置)的内容
     func _setRandomCharContent() {
-        var image: UIImage = {
-            guard let image = self.templateImage else {
-                return UIImage(named: "template", in: self.resourceBundle, compatibleWith: nil)!
-            }
-            return image
-        }()
+        guard var image = UIImage(named: "template") else { return }
         image                   = image.rescaleSize(CGSize(width: imageWidth, height: imageHeight))
         imageView.image         = image
         imageView.contentMode   = .scaleAspectFill
@@ -337,12 +317,7 @@ public class VerifyView: UIView {
 
     /// 设置字符校验(九宫格位置)的内容
     func _setTrimCharContent() {
-        var image: UIImage = {
-            guard let image = self.templateImage else {
-                return UIImage(named: "template", in: self.resourceBundle, compatibleWith: nil)!
-            }
-            return image
-        }()
+        guard var image = UIImage(named: "template") else { return }
         image                              = image.rescaleSize(CGSize(width: imageWidth, height: imageHeight))
         imageView.image                    = image
         hintLabel.textAlignment            = .center
@@ -391,7 +366,7 @@ public class VerifyView: UIView {
 
     /// 设置滑动视图
     func _setSliderContent() {
-        thumbImgView.image               = UIImage(named: "slide_button", in: self.resourceBundle, compatibleWith: nil)
+        thumbImgView.image               = UIImage(named: "slide_button")
         sliderView.backgroundColor       = sliderBgColor
         sliderView.layer.cornerRadius    = sliderHeight
         sliderView.layer.masksToBounds   = true

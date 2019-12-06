@@ -1,7 +1,10 @@
 {
   "name": "VerifyView",
-  "version": "0.1.0",
-  "summary": "A short description of VerifyView.",
+  "version": "0.0.2",
+  "summary": "滑动解锁",
+  "swift_versions": [
+    "5.0"
+  ],
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/TestEngineerFish/VerifyView",
   "license": {
@@ -13,10 +16,16 @@
   },
   "source": {
     "git": "https://github.com/TestEngineerFish/VerifyView.git",
-    "tag": "0.1.0"
+    "tag": "0.0.2"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "VerifyView/Classes/**/*"
+  "source_files": "VerifyView/Classes/**/*",
+  "resource_bundles": {
+    "VerifyView": [
+      "VerifyView/Assets/Assets.xcassets"
+    ]
+  },
+  "swift_version": "5.0"
 }

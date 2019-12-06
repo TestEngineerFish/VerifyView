@@ -1,30 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="VerifyView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginSliderView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Oz-hk-LQ8">
+                                <rect key="frame" x="37" y="186.5" width="301" height="294"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPU-P3-c2h">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="60"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.39607843139999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8n5-RV-1mq"/>
+                                        </constraints>
+                                        <state key="normal" title="拼图验证">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jej-Dd-bae"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB3-v2-MUU">
+                                        <rect key="frame" x="0.0" y="75" width="301" height="60"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.39607843139999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="随机字符验证">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c3b-HV-kOy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olp-SW-Jjm">
+                                        <rect key="frame" x="0.0" y="150" width="301" height="60"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.39607843139999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="字符验证">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xw-Os-Er0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehr-rX-Eez">
+                                        <rect key="frame" x="0.0" y="225" width="301" height="60"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.39607843139999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="滑动解锁">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jed-BZ-MkG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ehr-rX-Eez" firstAttribute="height" secondItem="TPU-P3-c2h" secondAttribute="height" id="0KD-CE-cW6"/>
+                                    <constraint firstItem="ehr-rX-Eez" firstAttribute="top" secondItem="olp-SW-Jjm" secondAttribute="bottom" constant="15" id="1YP-XX-ZVB"/>
+                                    <constraint firstItem="TPU-P3-c2h" firstAttribute="top" secondItem="4Oz-hk-LQ8" secondAttribute="top" id="4a1-6G-v2b"/>
+                                    <constraint firstItem="olp-SW-Jjm" firstAttribute="leading" secondItem="4Oz-hk-LQ8" secondAttribute="leading" id="AQH-JW-fBe"/>
+                                    <constraint firstAttribute="trailing" secondItem="LB3-v2-MUU" secondAttribute="trailing" id="EOb-YE-CTF"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPU-P3-c2h" secondAttribute="trailing" id="K8Z-7l-Aog"/>
+                                    <constraint firstItem="olp-SW-Jjm" firstAttribute="height" secondItem="TPU-P3-c2h" secondAttribute="height" id="KPz-MG-ZTa"/>
+                                    <constraint firstItem="ehr-rX-Eez" firstAttribute="leading" secondItem="4Oz-hk-LQ8" secondAttribute="leading" id="Pdc-Xr-xSk"/>
+                                    <constraint firstItem="LB3-v2-MUU" firstAttribute="leading" secondItem="4Oz-hk-LQ8" secondAttribute="leading" id="SKz-yh-M7v"/>
+                                    <constraint firstItem="LB3-v2-MUU" firstAttribute="height" secondItem="TPU-P3-c2h" secondAttribute="height" id="YpC-f7-yDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="ehr-rX-Eez" secondAttribute="trailing" id="bwg-le-sRw"/>
+                                    <constraint firstAttribute="trailing" secondItem="olp-SW-Jjm" secondAttribute="trailing" id="eSi-dR-wwc"/>
+                                    <constraint firstItem="LB3-v2-MUU" firstAttribute="top" secondItem="TPU-P3-c2h" secondAttribute="bottom" constant="15" id="fN0-dB-8y0"/>
+                                    <constraint firstItem="TPU-P3-c2h" firstAttribute="leading" secondItem="4Oz-hk-LQ8" secondAttribute="leading" id="lEA-Pq-ew6"/>
+                                    <constraint firstItem="olp-SW-Jjm" firstAttribute="top" secondItem="LB3-v2-MUU" secondAttribute="bottom" constant="15" id="t6q-ZX-tSq"/>
+                                    <constraint firstAttribute="bottom" secondItem="ehr-rX-Eez" secondAttribute="bottom" constant="9" id="uRy-MA-7w1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Oz-hk-LQ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2gt-Pq-IQj"/>
+                            <constraint firstItem="4Oz-hk-LQ8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E5b-xA-cDY"/>
+                            <constraint firstItem="TPU-P3-c2h" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" constant="1" id="cjl-FF-h6t"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="charButton" destination="olp-SW-Jjm" id="dhJ-X1-Rqn"/>
+                        <outlet property="puzzleButton" destination="TPU-P3-c2h" id="dLZ-SE-V83"/>
+                        <outlet property="randomCharButton" destination="LB3-v2-MUU" id="LfQ-dJ-aDN"/>
+                        <outlet property="sliderButton" destination="ehr-rX-Eez" id="AMN-ss-tWt"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

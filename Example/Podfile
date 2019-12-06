@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'VerifyView_Example' do
-  pod 'VerifyView', :path => '../'
+#  pod 'VerifyView', :git => 'https://github.com/TestEngineerFish/VerifyView.git'
 
   target 'VerifyView_Tests' do
     inherit! :search_paths

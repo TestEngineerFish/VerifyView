@@ -11,14 +11,14 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
-  - VerifyView (0.1.0)
+  - VerifyView (0.0.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
   - Nimble (~> 7.0)
   - Nimble-Snapshots (~> 6.3.0)
   - Quick (~> 1.2.0)
-  - VerifyView (from `../`)
+  - VerifyView (from `https://github.com/TestEngineerFish/VerifyView.git`)
 
 SPEC REPOS:
   trunk:
@@ -29,15 +29,20 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   VerifyView:
-    :path: "../"
+    :git: https://github.com/TestEngineerFish/VerifyView.git
+
+CHECKOUT OPTIONS:
+  VerifyView:
+    :commit: cb7c772c6cad55ca4040d5620e0f7dcbe9080e64
+    :git: https://github.com/TestEngineerFish/VerifyView.git
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  VerifyView: 0fe8b6db7ff0302edb83372e41ae538d96c41c5d
+  VerifyView: e6062a9ffc65d428d006f8c891f815562103a402
 
-PODFILE CHECKSUM: d8e1ed8a75d8c7f700b23bb2a9db5a3730485ac7
+PODFILE CHECKSUM: aa5fbd8531a56ddd875ca20662ea10b6a0ee098c
 
 COCOAPODS: 1.8.4
